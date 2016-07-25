@@ -10,13 +10,13 @@ usuario@servidor:/var/www$ ln -ls /var/spool/asterisk/monitor/ audio
 
 Nas configuraçoes do Asterisk  altere a string de salvamento no arquivo de configuração 'extensions.conf'.
 A string tem que ter o seguinte formato: 
-
+```
 exten => _XX.,1,Set(MONITOR_FILENAME=${STRFTIME(${EPOCH},,%Y-%m-%d_%H.%M.%S)}_${CDR(src)}_${CDR(dst)}_${CDR(billsec)})
 exten => _XX.,n,Mixmonitor(${MONITOR_FILENAME}.wav)
 exten => _XX.,n,Dial(SIP/${EXTEN}@tronco-que-centraliza-todas-ligacoes,50)
-
-Para o banco de dados, crie as tabelas:
 ```
+Para o banco de dados, crie as tabelas:
+```SQL
 CREATE TABLE `Ligacoes` (
 	`id_ligacao` INT(11) NOT NULL AUTO_INCREMENT,
 	`ramal` INT(11) NULL DEFAULT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `Ligacoes` (
 	PRIMARY KEY (`id_ligacao`)
 )
 ```
-```
+```SQL
 CREATE TABLE `Usuario` (
 	`id_usuario` INT(11) NOT NULL AUTO_INCREMENT,
 	`nome` VARCHAR(254) NULL DEFAULT NULL,
@@ -41,7 +41,7 @@ E por fim o script que varre o o diretório /var/spool/asterisk/monitor/ e alime
 (fica por sua conta crirar um procedimento de varredura altomatica)
 
 
-```
+```bash
 #!/bin/bash
 local="/var/spool/asterisk/monitor"
 cd $local
