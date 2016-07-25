@@ -65,8 +65,11 @@ done
 ```
 
 #Screenshot
-Usuarios:
-![alt text][usuario]
+
+<dl>
+	<dt>Usuario:</dt>
+	<dd>![alt text][usuario]</dd>
+</dl>
 Filtro1:
 ![alt text][filtro1]
 Filtro2:
