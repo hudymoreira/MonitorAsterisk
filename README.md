@@ -66,19 +66,26 @@ done
 
 #Screenshot
 
-<dl>
-	<dt>Usuario:</dt>
-	<dd>![alt text][usuario]</dd>
-</dl>
-Filtro1:
+<dl><dt>Usuario:</dt></dl>
+![alt text][usuario]
+<dl><dt>Filtro1:</dt></dl>
 ![alt text][filtro1]
-Filtro2:
+<dl><dt>Filtro2:</dt></dl>
 ![alt text][filtro2]
+<dl><dt>Lista de ligações:</dt></dl>
+![alt text][ligacoes]
+
+<dl><dt>Exportar para o Excel</dt></dl>
+![alt text][excel1]
+<dl><dt>Planilha com resultados</dt></dl>
+![alt text][excel2]
 
 [usuario]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/usuarios.png "Cadastro Usuarios"
 [filtro1]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/filtro1.png "Filtro"
 [filtro2]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/filtro2.png "Filtro"
-
+[ligacoes]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/ligacoes.png "Ligações"
+[excel1]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/excel1.png "Link exportação"
+[excel2]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/excel2.png "resultado pesquisa"
 
 
 
