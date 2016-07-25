@@ -1,5 +1,6 @@
 # MonitorAsterisk
 Escutar ligações gravadas pelo Asterisk através de uma pagina em PHP
+É possivel filtar as ligaçoes por ramal, mes e ano e ainda exportar para o Excel
 
 Para que funcina é necessario alimentar um banco de dados Mysql 
 com um Script que monitore a pasta /var/spool/asterisk/monitor/, criar um link 
@@ -62,6 +63,28 @@ for i in `ls`; do
 	fi
 done
 ```
+
+#Screenshot
+Usuarios:
+![alt text][usuario]
+Filtro1:
+![alt text][filtro1]
+Filtro2:
+![alt text][filtro2]
+
+[usuario]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/usuarios.png "Cadastro Usuarios"
+[filtro1]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/filtro1.png "Filtro"
+[filtro2]:https://github.com/hudymoreira/MonitorAsterisk/blob/master/files/screenshot/filtro2.png "Filtro"
+
+
+
+
+
+
+
+
+
+
 
 
 
