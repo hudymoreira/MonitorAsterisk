@@ -16,7 +16,7 @@ exten => _XX.,n,Mixmonitor(${MONITOR_FILENAME}.wav)
 exten => _XX.,n,Dial(SIP/${EXTEN}@tronco-que-centraliza-todas-ligacoes,50)
 
 Para o banco de dados, crie as tabelas:
-
+```
 CREATE TABLE `Ligacoes` (
 	`id_ligacao` INT(11) NOT NULL AUTO_INCREMENT,
 	`ramal` INT(11) NULL DEFAULT NULL,
@@ -27,18 +27,21 @@ CREATE TABLE `Ligacoes` (
 	`bk` BIT(1) NULL DEFAULT NULL,
 	PRIMARY KEY (`id_ligacao`)
 )
-
+```
+```
 CREATE TABLE `Usuario` (
 	`id_usuario` INT(11) NOT NULL AUTO_INCREMENT,
 	`nome` VARCHAR(254) NULL DEFAULT NULL,
 	`ramal` INT(11) NULL DEFAULT NULL,
 	PRIMARY KEY (`id_usuario`)
 )
-
+```
 E por fim o script que varre o o diretório /var/spool/asterisk/monitor/ e alimenta a tabela Ligacoes
 
 (fica por sua conta crirar um procedimento de varredura altomatica)
 
+
+```
 #!/bin/bash
 local="/var/spool/asterisk/monitor"
 cd $local
@@ -58,7 +61,7 @@ for i in `ls`; do
     echo "insert into Ligacoes (ramal,data_ligacao,arquivo,numero,duracao,bk) values ($ramal,'$dataL','$arquivo','$numero',$duracao,0)"  | mysql MLigacao -u root -pmaster
 	fi
 done
-
+```
 
 
 
