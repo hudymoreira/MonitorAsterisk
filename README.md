@@ -42,7 +42,7 @@ CREATE TABLE `Usuario` (
 ```
 E por fim o script que varre o o diretório /var/spool/asterisk/monitor/ e alimenta a tabela Ligacoes
 
-(fica por sua conta crirar um procedimento de varredura altomatica)
+(fica por sua conta crirar um procedimento de varredura automatica)
 
 
 ```bash
